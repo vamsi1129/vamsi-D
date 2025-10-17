@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Example</title>
+</head>
+<body>
+    <h1>Window Object Demo</h1>
+    <button onclick="showWindowInfo()">Show Window Info</button>
+    <button onclick="openNewWindow()">Open New Window</button>
+    <button onclick="closeNewWindow()">Close New Window</button>
+
+    <div id="output"></div>
+
+    <script>
+        let newWin; // to store reference of opened window
+        function showWindowInfo()
+        {
+            // using window properties
+            let width =window.innerWidth;
+            let height = window.innerHeight;
+            let locationHref = window.location.href;
+
+            // Displaying the information
+            document.getElementById("output").innerHTML =
+                "Window Width: " + width + "<br>" +
+                "Window Height: " + height + "<br>" +
+                "Current URL: " + locationHref;
+        }
+        function openNewWindow() {
+            //using window.open()
+            newWin = window.open("https://www.google.com","Example","width=400,height=300");
+        }
+        function closeNewWindow() {
+            //using window.close()
+            if(newWin) {
+                newWin.close();
+            }
+        }
+    </script>
+</body>
+</html>

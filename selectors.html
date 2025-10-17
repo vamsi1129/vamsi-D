@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Demo</title>
+  <style>
+    /* 1. Universal Selector */
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    /* 2. Type Selector */
+    h1 {
+      color: darkblue;
+    }
+
+    /* 3. Class Selector */
+    .highlight {
+      background-color: yellow;
+    }
+
+    /* 4. ID Selector */
+    #main {
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    /* 5. Group Selector */
+    h2, p {
+      margin-bottom: 10px;
+    }
+
+    /* 6. Descendant Selector */
+    .container p {
+      color: green;
+    }
+
+    /* 7. Child Selector */
+    ul > li {
+      color: red;
+    }
+
+    /* 8. Adjacent Sibling Selector */
+    h2 + p {
+      font-style: italic;
+    }
+
+    /* 9. General Sibling Selector */
+    h3 ~ p {
+      color: purple;
+    }
+
+    /* 10. Attribute Selector */
+    input[type="text"] {
+      border: 1px solid blue;
+    }
+
+    /* 11. Pseudo-classes */
+    a:hover {
+      color: red;
+    }
+
+    li:first-child {
+      font-weight: bold;
+    }
+
+    li:last-child {
+      text-decoration: underline;
+    }
+
+    li:nth-child(2) {
+      color: orange;
+    }
+
+    input:focus {
+      background-color: lightyellow;
+    }
+
+    /* 12. Pseudo-elements */
+    p::first-letter {
+      font-size: 200%;
+      color: navy;
+    }
+
+    p::after {
+      content: " ✔";
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selector Demo</h1>
+
+  <div id="main" class="container">
+    <h2 class="highlight">Subheading</h2>
+    <p>This is a paragraph inside a container.</p>
+    <p class="highlight">Another highlighted paragraph.</p>
+    <h3>Another Heading</h3>
+    <p>This paragraph is a general sibling of h3.</p>
+    <p>And so is this one.</p>
+
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+
+    <input type="text" placeholder="Type here...">
+    <br><br>
+    <a href="#">Hover over me</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    a:hover {
+      color: red;
+    }
+
+    input:focus {
+      background-color: lightyellow;
+    }
+
+    li:first-child {
+      font-weight: bold;
+    }
+
+    li:last-child {
+      color: green;
+    }
+
+    li:nth-child(2) {
+      color: orange;
+    }
+
+    input:checked + label {
+      color: blue;
+    }
+
+    input:disabled {
+      background-color: #ccc;
+    }
+
+    p:not(.special) {
+      color: gray;
+    }
+
+    div:empty {
+      border: 1px solid red;
+      height: 20px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pseudo-Class Selectors</h2>
+
+  <a href="#">Hover over me</a><br><br>
+
+  <input type="text" placeholder="Click to focus"><br><br>
+
+  <ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+  </ul>
+
+  <input type="checkbox" id="check1" checked>
+  <label for="check1">Checked box</label><br>
+
+  <input type="checkbox" id="check2">
+  <label for="check2">Unchecked box</label><br><br>
+
+  <input type="text" value="Disabled input" disabled><br><br>
+
+  <p class="special">Special paragraph</p>
+  <p>Normal paragraph (gray)</p>
+
+  <div></div> <!-- Empty div will be highlighted -->
+
+</body>
+</html>
+

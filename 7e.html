@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Object Example</title>
+</head>
+<body>
+    <h2>javaScript String Object Example</h2>
+    <p id="output"></p>
+
+    <script>
+        // creating a string
+        let text = "Hello, welcome to JavaScript String Object Example.";
+
+        // String properties
+        let length = text.length; // length of the string
+
+        // using String methods
+        let upper = text.toUpperCase(); // convert to uppercase
+        let lower = text.toLowerCase(); // convert to lowercase
+        let trimmed = text.trim(); // remove whitespace from both ends
+        let sliced = text.slice(7, 14); // extract a section of the string
+        let replaced = text.replace("JavaScript", "JS"); // replace a substring
+        let charAtpos = text.charAt(7); // get character at position 7
+        let index=text.indexOf("welcome"); // get index of substring "welcome"
+        let splitted = text.trim().split(" "); // split the string into an array of words
+
+        // Displaying the results
+        document.getElementById("output").innerHTML =
+            "<b>Original String:</b> " + text + "<br><br>" +
+            "<b>Length:</b> " + length + "<br>" +
+            "<b>Uppercase:</b> " + upper + "<br>" +
+            "<b>Lowercase:</b> " + lower + "<br>" +
+            "<b>Trimmed:</b> '" + trimmed + "'<br>" +
+            "<b>Sliced (7,14):</b> " + sliced + "<br>" +
+            "<b>Replaced 'JavaScript' with 'JS':</b> " + replaced + "<br>" +
+            "<b>Character at position 7:</b> " + charAtpos + "<br>" +
+            "<b>Index of 'welcome':</b> " + index + "<br>" +
+            "<b>Splitted into array:</b> + splitted.join(", ") ";
+    </script>
+</body>
+</html>

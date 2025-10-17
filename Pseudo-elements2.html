@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    p::first-letter {
+        font-size: 200%;
+        color: darkred;
+        font-weight: bold;
+    }
+    p::first-line {
+        color: green;
+        font-style: italic;
+    }
+
+    h2::before {
+        content: "star ";
+        color: orange;
+    }
+    h2::after {
+        content: " star";
+        color: orange;
+    }
+    ::selection {
+        background: yellow;
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <h1>pseudo Element Selectors Demo</h1>
+    <h2>CSS Magic</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam consequatur magni libero eum, assumenda nulla nobis sapiente sint distinctio, odio dicta quisquam minima totam voluptatibus dolore hic architecto itaque?
+    </p>
+</body>
+</html>

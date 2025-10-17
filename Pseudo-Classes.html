@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Pseudo-Classes Demo</title>
+  <style>
+    /* Link pseudo-classes */
+    a:link {
+      color: blue;
+    }
+    a:visited {
+      color: purple;
+    }
+    a:hover {
+      color: red;
+    }
+    a:active {
+      color: green;
+    }
+
+    /* Structural pseudo-classes */
+    ul li:first-child {
+      color: red;
+    }
+    ul li:last-child {
+      color: blue;
+    }
+    ul li:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+    ul li:nth-child(even) {
+      background-color: #d0f0d0;
+    }
+    ul li:only-child {
+      font-weight: bold;
+    }
+
+    /* Form pseudo-classes */
+    input:focus {
+      background-color: yellow;
+    }
+    input:checked + label {
+      font-weight: bold;
+      color: green;
+    }
+    input:required {
+      border: 2px solid red;
+    }
+    input:valid {
+      border-color: green;
+    }
+    input:invalid {
+      border-color: red;
+    }
+
+    /* Target */
+    #section1:target {
+      background-color: lightblue;
+    }
+
+    /* :not() pseudo-class */
+    p:not(.special) {
+      color: gray;
+    }
+
+    /* :empty */
+    div:empty {
+      border: 1px dashed red;
+      height: 30px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Link Pseudo-Classes</h2>
+  <a href="#">Unvisited Link</a> |
+  <a href="https://example.com">Visited Link</a>
+
+  <h2>List with Structural Pseudo-classes</h2>
+  <ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <li>Item Three</li>
+    <li>Item Four</li>
+  </ul>
+
+  <h2>Form Input Pseudo-classes</h2>
+  <form>
+    <label>
+      Required Input:
+      <input type="text" required placeholder="Required field">
+    </label><br><br>
+
+    <label>
+      Valid Email:
+      <input type="email" placeholder="Enter email">
+    </label><br><br>
+
+    <input type="checkbox" id="check1" checked>
+    <label for="check1">Checkbox Label</label><br><br>
+  </form>
+
+  <h2>:target Pseudo-class</h2>
+  <a href="#section1">Go to Section 1</a>
+  <div id="section1" style="margin-top: 20px;">This is Section 1</div>
+
+  <h2>:not() and :empty</h2>
+  <p class="special">Special Paragraph</p>
+  <p>Normal Paragraph</p>
+  <div></div> <!-- This is an empty div -->
+
+</body>
+</html>

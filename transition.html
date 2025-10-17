@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbial iamge gallery</title>
+
+    <style>
+        body{
+            font-family: arial,sans-serif;
+            text-align: center;
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px; 
+        }
+        .gallery a img{ 
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallert a img:hover{
+            transform: scale(1.1);
+            border-color: #666;
+        }
+    </style>
+
+</head>
+<body>
+<h1>MY IMAGE GALLERY</h1>
+<p>Click on a thumbail to view the full sized image</p>
+<div class="gallery">
+    <a href="" target="_blank">
+        <img src="../imgs/its me.jpeg" alt="Image 1">
+    </a>
+</div>
+    
+</body>
+</html>
